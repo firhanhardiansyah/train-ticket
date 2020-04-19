@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
@@ -34,12 +34,16 @@
     </div>
   </nav>
 
-  <div class="container pt-3">
-    <h2>Cari & Pesan Tiket Kereta Api Online</h2>
-    <h4>Info Harga</h4>
-    <h4>Dari <span class="typedDari"></span></h4>
+  <div class="content">
+    <div class="container">
+      <h2>Cari & Pesan Tiket Kereta Api Online</h2>
+      <h4>Info Harga</h4>
+      <h4>Dari <span class="typedDari"></span></h4>
+    </div>
+  </div>
 
-    <div class="card text-white">
+  <div class="container pt-3">
+    <div class="card text-white min-mt">
       <!--  -->
       <div class="card-header bg-primary">
         <h5>PESAN TIKET KERETA API</h5>
