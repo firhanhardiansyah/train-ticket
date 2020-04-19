@@ -50,7 +50,7 @@
       </div>
       <!--  -->
       <div class="card-body text-dark">
-        <form action="" method="POST" id="form-tiket" class="needs-validation" novalidate>
+        <form action="" method="POST" class="needs-validation" novalidate>
           <div class="form-row">
             <div class="form-group col-4">
               <label>Dari</label>
