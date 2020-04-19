@@ -95,7 +95,6 @@
   <!-- end Form -->
 
   <?php
-
     include "proses.php";
   ?>
 
