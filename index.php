@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pemesanan Tiket Kereta</title>
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
+  <script src="asset/js/sweetalert.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="asset/css/style.css">
-<link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
-<script src="asset/js/sweetalert.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -33,7 +33,7 @@
         </div>
     </div>
   </nav>
-  
+
   <div class="container pt-3">
     <h2>Cari & Pesan Tiket Kereta Api Online</h2>
     <h4>Info Harga</h4>
@@ -46,7 +46,7 @@
       </div>
       <!--  -->
       <div class="card-body text-dark">
-        <form action="" method="POST">
+        <form action="" method="POST" id="form-tiket" class="needs-validation" novalidate>
           <div class="form-row">
             <div class="form-group col-4">
               <label>Dari</label>
@@ -68,12 +68,13 @@
             </div>
             <div class="form-group col-4">
               <label>Jumlah Tiket</label>
-              <input type="number" name="jml_tiket" class="form-control" id="jml_tiket" placeholder="Minimal 1"
-                required>
+              <input type="text" name="jml_tiket" class="form-control" id="jml_tiket" placeholder="Minimal 1" required>
+              <div class="invalid-feedback">Minimal 1 tiket !</div>
+              <!-- <span class="pesan-nama"></span> -->
             </div>
           </div>
-          <button type="submit" class="btn btn-warning float-right col-2" name="submit"><i class="fas fa-search"></i>
-            Cari</button>
+          <button type="submit" class="btn btn-warning float-right col-2" name="submit"><i
+              class="fas fa-search"></i>Cari</button>
         </form>
       </div>
     </div>
@@ -126,9 +127,7 @@
 
   <script src="asset/js/jquery_3_4_1.min.js"></script>
   <script src="asset/bootstrap/js/bootstrap.min.js"></script>
-  <script src="asset/js/jquery_validate.min.js"></script>
   <script src="asset/js/typed.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script> -->
   <script src="asset/js/script.js"></script>
 
 </body>

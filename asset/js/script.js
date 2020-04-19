@@ -15,41 +15,40 @@ var typed = new Typed(".typedDari", {
 	loop: true,
 });
 
-$(document).ready(function () {
-	$("#form-tiket").validate({
-		rules: {
-			jml_tiket: {
-				min: 1,
-				required: true,
-			},
+(function () {
+	"use strict";
+	window.addEventListener(
+		"load",
+		function () {
+			var forms = document.getElementsByClassName("needs-validation");
+			var jmlTiket = document.getElementsById("jumlah_tiket");
+
+			var validation = Array.prototype.filter.call(forms, function (form) {
+				form.addEventListener(
+					"submit", function (event) {
+						if (jmlTiket == 0 ) {
+							if (form.checkValidity() === false) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
+						}
+						form.classList.add("was-validated");
+					},
+					false,
+				);
+			});
 		},
-		messages: {
-			jml_tiket: "Minimal 1 tiket",
-		},
-		success: function (e) {
-			e.text("Ok!")
-				.addClass("text-center text-success")
-				.closest(".form-control")
-				.removeClass("text-success");
-		},
+		false,
+	);
+})();
+
+$(document).ready(function() {
+	$('.needs-validation').submit(function(){
+		var jmlTiket = $('#jml_tiket').val();
+
+		if (jmlTiket == 0) {
+			$('.pesan-nama').css('display', 'block');
+			return false;
+		}
 	});
 });
-
-// $(document).ready(function(){
-//   $('form-tiket').bootstrapValidator({
-//     fields: {
-//       jml_tiket: {
-//         validators: {
-//           min: 1,
-//           notEmpty: {
-//             message: 'min 1'
-//           }
-//         }
-//       }
-//     }
-//   })
-//   .on('success.form.bv', function(e){
-
-//   })
-//   ;
-// });
