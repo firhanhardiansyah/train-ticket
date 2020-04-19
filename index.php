@@ -14,26 +14,31 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="navbar navbar-expand-lg navbar-dark bg-custom">
     <div class="container">
       <a class="navbar-brand" style="font-family: 'Varela Round', sans-serif;" href="#">
-        <i class="fas fa-ticket-alt fa-lg">
+        <i class="fas fa-subway fa-lg">
         </i>
-        TiketKeretaApiOnline.com
+        beli-tiket.com
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </span>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link active" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">About</a>
-          </div>
-        </div>
-    </div>
-  </nav>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-2 my-2">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
   <div class="content">
     <div class="container">
       <h2>Cari & Pesan Tiket Kereta Api Online</h2>
@@ -41,7 +46,9 @@
       <h4>Dari <span class="typedDari"></span></h4>
     </div>
   </div>
+<!-- end Content -->
 
+  <!-- Form -->
   <div class="container pt-3">
     <div class="card text-white min-mt">
       <!--  -->
@@ -55,6 +62,7 @@
             <div class="form-group col-4">
               <label>Dari</label>
               <select class="form-control" name="dari_mana">
+                <option selected>Kota / Stasiun</option>
                 <option value="jakarta">Jakarta</option>
                 <option value="bandung">Bandung</option>
                 <option value="yogyakarta">Yogyakarta</option>
@@ -64,6 +72,7 @@
             <div class="form-group col-4">
               <label>Ke</label>
               <select class="form-control" name="ke_mana">
+                <option selected>Mau Kemana ?</option>
                 <option value="bandung">Bandung</option>
                 <option value="jakarta">Jakarta</option>
                 <option value="yogyakarta">Yogyakarta</option>
@@ -77,53 +86,17 @@
               <!-- <span class="pesan-nama"></span> -->
             </div>
           </div>
-          <button type="submit" class="btn btn-warning float-right col-2" name="submit"><i
-              class="fas fa-search"></i>Cari</button>
+          <button type="submit" class="btn-custom float-right col-2" name="submit"><i
+              class="fas fa-search"></i> Cari</button>
         </form>
       </div>
     </div>
-
   </div>
+  <!-- end Form -->
 
   <?php
-    if (isset($_POST['submit'])) {
-      $dari_mana = $_POST['dari_mana'];
-      $ke_mana = $_POST['ke_mana'];
-      $jml_tiket = $_POST['jml_tiket'];
-      $harga_tiket = 0;
-
-      if ($jml_tiket != 0) {
-        if (($dari_mana == "jakarta") && ($ke_mana == "bandung")) {
-          $harga_tiket = 20000;
-          $total_harga = $harga_tiket * $jml_tiket;
-            echo "Dari         : ".$dari_mana."<br>";
-            echo "Ke           : ".$ke_mana."<br>";
-            echo "Harga Tiket  : Rp.".$harga_tiket."<br>";
-            echo "Jumlah Tiket : ".$jml_tiket."<br>";
-            echo "Total Harga  : Rp.".$total_harga."<br>";
-          } else if (($dari_mana == "jakarta") && ($ke_mana == "yogyakarta")) {
-            $harga_tiket = 50000;
-            $total_harga = $harga_tiket * $jml_tiket;
-              echo "Dari         : ".$dari_mana."<br>";
-              echo "Ke           : ".$ke_mana."<br>";
-              echo "Harga Tiket  : Rp.".$harga_tiket."<br>";
-              echo "Jumlah Tiket : ".$jml_tiket."<br>";
-              echo "Total Harga  : Rp.".$total_harga."<br>";
-          } else if (($dari_mana == "jakarta") && ($ke_mana == "surabaya")) {
-            $harga_tiket = 75000;
-            $total_harga = $harga_tiket * $jml_tiket;
-              echo "Dari         : ".$dari_mana."<br>";
-              echo "Ke           : ".$ke_mana."<br>";
-              echo "Harga Tiket  : Rp.".$harga_tiket."<br>";
-              echo "Jumlah Tiket : ".$jml_tiket."<br>";
-              echo "Total Harga  : Rp.".$total_harga."<br>";
-          } else if (($dari_mana == "jakarta") && ($ke_mana == "jakarta")) {
-            echo "Tujuan Tidak Boleh Sama";
-          }
-      }  
-    }
+    include "proses.php";
   ?>
-
 
   <div id="footer">
     &copy Firhan Hardiansyah
