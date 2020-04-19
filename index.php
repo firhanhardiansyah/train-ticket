@@ -32,8 +32,8 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li> 
+            <a class="nav-link" href="#">About</a>
+          </li>
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
       <h4>Dari <span class="typedDari"></span></h4>
     </div>
   </div>
-<!-- end Content -->
+  <!-- end Content -->
 
   <!-- Form -->
   <div class="container pt-3">
@@ -86,8 +86,8 @@
               <!-- <span class="pesan-nama"></span> -->
             </div>
           </div>
-          <button type="submit" class="btn-custom float-right col-2" name="submit"><i
-              class="fas fa-search"></i> Cari</button>
+          <button type="submit" class="btn-custom float-right col-2" name="submit"><i class="fas fa-search"></i>
+            Cari</button>
         </form>
       </div>
     </div>
@@ -95,6 +95,7 @@
   <!-- end Form -->
 
   <?php
+
     include "proses.php";
   ?>
 

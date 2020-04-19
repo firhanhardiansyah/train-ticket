@@ -17,11 +17,11 @@
           } else if (($dari_mana == "jakarta") && ($ke_mana == "yogyakarta")) {
             $harga_tiket = 50000;
             $total_harga = $harga_tiket * $jml_tiket;
-              echo "Dari         : ".$dari_mana."<br>";
-              echo "Ke           : ".$ke_mana."<br>";
-              echo "Harga Tiket  : Rp.".$harga_tiket."<br>";
-              echo "Jumlah Tiket : ".$jml_tiket."<br>";
-              echo "Total Harga  : Rp.".$total_harga."<br>";
+            echo "Dari         : ".$dari_mana."<br>";
+            echo "Ke           : ".$ke_mana."<br>";
+            echo "Harga Tiket  : Rp.".$harga_tiket."<br>";
+            echo "Jumlah Tiket : ".$jml_tiket."<br>";
+            echo "Total Harga  : Rp.".$total_harga."<br>";
           } else if (($dari_mana == "jakarta") && ($ke_mana == "surabaya")) {
             $harga_tiket = 75000;
             $total_harga = $harga_tiket * $jml_tiket;
