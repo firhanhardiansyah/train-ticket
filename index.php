@@ -108,7 +108,7 @@
   <br><br><br>
 
   <div class="footer">
-    &copy Firhan Hardiansyah
+    &copy : 2020. FIRHAN HARDIANSYAH, ILHAMSYAH, ALFINA NOVIYANTI
   </div>
 
   <script src="asset/js/jquery_3_4_1.min.js"></script>

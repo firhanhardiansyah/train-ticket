@@ -25,7 +25,7 @@ echo '<div class="card">
         <h6>Harga Tiket</h6>
       </div>
       <div class="col">
-        <p>'.$harga_tiket.'</p>
+        <p> Rp. '.number_format($harga_tiket,0,'.','.').'</p>
       </div>
     </div>
     <div class="row">
@@ -41,7 +41,7 @@ echo '<div class="card">
         <h6>Total Harga</h6>
       </div>
       <div class="col">
-        <p>'.$total_harga.'</p>
+        <p> Rp. '.number_format($total_harga,0,'.','.').'</p>
       </div>
     </div>
 </div>
