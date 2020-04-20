@@ -52,7 +52,7 @@
   <div class="container pt-3">
     <div class="card text-white min-mt">
       <!--  -->
-      <div class="card-header bg-primary">
+      <div class="card-header" style="background-color: #536DFE;">
         <h5>PESAN TIKET KERETA API</h5>
       </div>
       <!--  -->
@@ -94,11 +94,14 @@
   </div>
   <!-- end Form -->
 
-  <?php
-    include "proses.php";
-  ?>
+  <div class="container pt-3">
+    <?php
+      include "proses.php";
+    ?>
+  </div>
+  <br><br><br>
 
-  <div id="footer">
+  <div class="footer">
     &copy Firhan Hardiansyah
   </div>
 
