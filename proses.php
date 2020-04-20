@@ -16,12 +16,12 @@
           } else if (($dari_mana == "bandung") && ($ke_mana == "bandung")) {
               echo '<div class="alert alert-danger" role="alert"> Tidak Boleh sama ! </div>';
 
-          } else if (($dari_mana == "yogyakarta") && ($ke_mana == "yogyakarta")) {
+          } else if (($dari_mana == "surabaya") && ($ke_mana == "surabaya")) {
               echo '<div class="alert alert-danger" role="alert"> Tidak Boleh sama ! </div>';
 
           } else if (($dari_mana == "surabaya") && ($ke_mana == "surabaya")) {
-            echo '<div class="alert alert-danger" role="alert"> Tidak Boleh sama ! </div>';
-            
+              echo '<div class="alert alert-danger" role="alert"> Tidak Boleh sama ! </div>';
+              
           }
            else if (($dari_mana == "jakarta") && ($ke_mana == "bandung")) {
               $harga_tiket = 20000;
