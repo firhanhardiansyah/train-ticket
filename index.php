@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
   <script src="asset/js/sweetalert.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+  <style>
+    .pesan-nama {
+      display: none;
+      color: black;
+      margin: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -62,7 +69,7 @@
             <div class="form-group col-4">
               <label>Dari</label>
               <select class="form-control" name="dari_mana">
-                <option selected>Kota / Stasiun</option>
+                <option selected value="">Kota / Stasiun</option>
                 <option value="jakarta">Jakarta</option>
                 <option value="bandung">Bandung</option>
                 <option value="yogyakarta">Yogyakarta</option>
@@ -72,9 +79,9 @@
             <div class="form-group col-4">
               <label>Ke</label>
               <select class="form-control" name="ke_mana">
-                <option selected>Mau Kemana ?</option>
-                <option value="bandung">Bandung</option>
+                <option selected value="">Mau Kemana ?</option>
                 <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
                 <option value="yogyakarta">Yogyakarta</option>
                 <option value="surabaya">Surabaya</option>
               </select>
@@ -83,7 +90,6 @@
               <label>Jumlah Tiket</label>
               <input type="text" name="jml_tiket" class="form-control" id="jml_tiket" placeholder="Minimal 1" required>
               <div class="invalid-feedback">Minimal 1 tiket !</div>
-              <!-- <span class="pesan-nama"></span> -->
             </div>
           </div>
           <button type="submit" class="btn-custom float-right col-2" name="submit"><i class="fas fa-search"></i>
